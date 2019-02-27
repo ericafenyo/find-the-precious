@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
 :root {
     --border-color: #eaedf3;
 }
@@ -13,36 +14,46 @@
  * i.e box-sizing: border-box.
  */
 
-*, ::after, ::before {
+*,
+::after,
+::before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* h2 {
-    font-size: 64px;
+h2 {
+    font-size: 48px;
     font-weight: 400;
     color: white;
-} */
+}
+
+@media (min-width: 576px) {
+    h2 {
+        font-weight: 400;
+        color: white;
+    }
+}
 
 /* Utility class */
 
-.full-bleed {
+/* .full-bleed {
     height: 100vh;
-}
+} */
 
 /** Wrapper classe*/
 
-.container {
+/* .container {
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 16px;
-}
+} */
 
 /* Surround element with a border with corner radii */
 
@@ -54,27 +65,17 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
 } */
 
-/* Flex box */
 
-/* .container, .align-center {
-    display: flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-} */
+.mt-80 {
+    margin-top: 80px !important;
+}
 
 .profile {
     position: relative;
-    max-width: calc(100%/3);
-    height: 500px;
 }
 
-.profile .identity, .profile .reward {
+.profile .identity,
+.profile .reward {
     left: 50%;
     -webkit-transition: .2s all;
     transition: .2s all;
@@ -82,7 +83,19 @@ body {
     transform: translateX(-50%);
 }
 
-.profile::before, .profile .identity, .profile .reward {
+.identity {
+    width: 100%;
+    text-align: center;
+}
+
+.hide-overflow {
+    overflow: hidden;
+}
+
+
+.profile::before,
+.profile .identity,
+.profile .reward {
     position: absolute;
 }
 
@@ -110,6 +123,7 @@ body {
         font-size: 32px;
         opacity: 0;
     }
+
     100% {
         font-size: 32px;
     }
@@ -120,6 +134,7 @@ body {
         font-size: 32px;
         opacity: 0;
     }
+
     100% {
         font-size: 32px;
     }
@@ -144,7 +159,8 @@ body {
     background: rgba(255, 255, 255, .9);
 }
 
-.profile img, .profile::before {
+.profile img,
+.profile::before {
     width: 100%;
     height: 100%;
 }
@@ -152,3 +168,39 @@ body {
 .profile .identity {
     bottom: 35%;
 }
+
+@media screen and (min-width:576px) {
+    .identity {
+        font-size: 4rem
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    .identity {
+        font-size: 2rem
+    }
+
+    .profile .reward {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+    .identity {
+        font-size: 3rem
+    }
+
+    .profile .reward {
+        font-size: 1.2rem;
+    }
+}
+
+/* @media screen and (min-width:480px){
+    
+} */
+/* xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px */
