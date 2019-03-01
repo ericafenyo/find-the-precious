@@ -1,6 +1,6 @@
 :root {
     --color-primary: #FE661D;
-    --color-secondary: rgba(255, 255, 255, 0.6);
+    --color-secondary: rgba(255, 255, 255, 1);
 }
 
 @font-face {
@@ -23,6 +23,14 @@
     src: url(./assets/fonts/partybusiness.ttf)
 }
 
+.skew {
+    transform: skewX(-20deg);
+}
+
+.un-skew {
+    transform: skewX(20deg);
+}
+
 body {
     font-family: "Anirb" !important;
 }
@@ -32,21 +40,24 @@ h2 {
     font-weight: 400;
 }
 
+th{
+    border-bottom: 3px solid #000 !important;
+}
+
 .color-primary {
     color: var(--color-primary)
 }
 
 .body-one {
     font-family: "Partybusiness";
-    font-size: 24px;
+    line-height: 1.5;
 }
 
-.header, .header span {
-    font-size: 26px;
-    font-family: "Partybusiness"
+.panel {
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px;
+    padding-bottom: 4px;
 }
-
-.title {}
 
 /* Utilities */
 
@@ -70,11 +81,12 @@ h2 {
     background-size: cover;
 }
 
-.card {
+.profile {
     width: 300px;
+    height: 100%;
 }
 
-.text-white-secodary {
+.text-white-secondary {
     color: rgba(255, 255, 255, .7)
 }
 
@@ -82,21 +94,22 @@ h2 {
     font-size: 12px;
 }
 
-.carousel-caption h2 {
-    font-family: "Partybusiness"
-}
-
-.carousel-caption p {
-    font-family: "Partybusiness"
-}
-
-.header-caption {
-    font-size: 16px !important;
-}
-
 .nav-link {
     color: var(--color-secondary);
     position: relative;
+}
+
+.button {
+    text-align: center;
+    padding: 2px 8px;
+}
+
+.price {
+    width: 120px;
+}
+
+.w-100px {
+    width: 100px;
 }
 
 /* .nav-item :after {
@@ -111,8 +124,13 @@ h2 {
 
 .title-capsule {
     font-family: "Tngani";
-    color: rgba(254, 102, 29, .8);
-    font-size: 40px !important;
+    color: rgba(254, 102, 29, .7);
+    font-size: 25px;
+    vertical-align: top;
+}
+
+.text-color-primary {
+    color: var(--color-primary)
 }
 
 .tab-capsule {
@@ -129,12 +147,24 @@ h2 {
     border-radius: 0 !important;
 }
 
-.nav-pills a:hover, .nav-pills a .is-active {
+.tab-layout {
+    border-bottom: 4px solid transparent;
+    justify-content: space-evenly
+}
+
+.tab-item {
+    flex-basis: unset !important;
+    flex-grow: unset !important;
+}
+
+.tab-layout a:hover,
+.tab-layout .is-active {
     color: var(--color-primary) !important;
     border-bottom: 4px solid var(--color-primary);
 }
 
-.nav-pills a:hover .tab-capsule {
+.tab-layout .is-active .tab-capsule,
+.tab-layout a:hover .tab-capsule {
     opacity: 1;
 }
 
@@ -147,7 +177,8 @@ h2 {
     margin-right: 0;
 }
 
-.profile .identity, .profile .reward {
+.profile .identity,
+.profile .reward {
     left: 50%;
     -webkit-transition: .2s all;
     transition: .2s all;
@@ -164,7 +195,9 @@ h2 {
     overflow: hidden;
 }
 
-.profile::before, .profile .identity, .profile .reward {
+.profile::before,
+.profile .identity,
+.profile .reward {
     position: absolute;
 }
 
@@ -226,7 +259,8 @@ h2 {
     background: rgba(255, 255, 255, .9);
 }
 
-.profile img, .profile::before {
+.profile img,
+.profile::before {
     width: 100%;
     height: 100%;
 }
