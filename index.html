@@ -14,17 +14,17 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark background-primary">
             <img src="./assets/img/logo.png" alt="Logo" width="160">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-                aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <a class="nav-item nav-link active" href="#">Fellows</a>
-                <a class="nav-item nav-link" href="#">The Ring</a>
-                <a class="nav-item nav-link " href="#">Get My Reward</a>
-                <a class="nav-item nav-link" href="#">Best hunters</a>
-                <a class="nav-item nav-link" href="#">Join the army</a>
-                <a class="nav-item nav-link " href="#">Contact us</a>
+                <a class="nav-item nav-link link active" href="#">Fellows</a>
+                <a class="nav-item nav-link link " href="#">The Ring</a>
+                <a class="nav-item nav-link link " href="#">Get My Reward</a>
+                <a class="nav-item nav-link link " href="#">Best hunters</a>
+                <a class="nav-item nav-link link " href="#">Join the army</a>
+                <a class="nav-item nav-link link " href="#">Contact us</a>
             </div>
         </nav>
     </header>
@@ -35,24 +35,27 @@
                     <div class="carousel-item active ">
                         <img src="./assets/img/dark_vador.jpg" class="d-block w-100" alt="Image backdrop">
                         <div class="carousel-caption d-none d-md-block bg-gradient-dark">
-                            <p class="display-4 header">sauron is a very goog bro,</p>
-                            <p class="h3"> please help him go find his ring ! <span class="ml-5"> -d.v.</span></p>
+                            <p class="display-4 body-one">sauron is a very goog bro,</p>
+                            <p class="h3 body-one"> please help him go find his ring ! <span class="ml-5"> -d.v.</span>
+                            </p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://image.tmdb.org/t/p/original/pIUvQ9Ed35wlWhY2oU6OmwEsmzG.jpg" class="d-block w-100"
-                            alt="Image backdrop">
+                        <img src="https://image.tmdb.org/t/p/original/pIUvQ9Ed35wlWhY2oU6OmwEsmzG.jpg"
+                            class="d-block w-100" alt="Image backdrop">
                         <div class="carousel-caption d-none d-md-block bg-gradient-dark">
-                            <p class="display-4 header">you shall not pass!</p>
-                            <p class="h3">may it be a light for you in dark places, when all other lights go out.</p>
+                            <p class="display-4 body-one">you shall not pass!</p>
+                            <p class="h3 body-one">may it be a light for you in dark places, when all other lights go
+                                out.</p>
                         </div>
                     </div>
                     <div class="carousel-item ">
-                        <img src="https://image.tmdb.org/t/p/original/q9nym8NbrISGGHLpQbhxfevKCZ2.jpg" class="d-block w-100"
-                            alt="Image backdrop">
+                        <img src="https://image.tmdb.org/t/p/original/q9nym8NbrISGGHLpQbhxfevKCZ2.jpg"
+                            class="d-block w-100" alt="Image backdrop">
                         <div class="carousel-caption d-none d-md-block">
-                            <p class="display-4">my dear Gandalf!</p>
-                            <p class="h3">so do all who live to see such times, but that is not for them to decide.
+                            <p class="display-4 body-one">my dear Gandalf!</p>
+                            <p class="h3 body-one">so do all who live to see such times, but that is not for them to
+                                decide.
                             </p>
                         </div>
                     </div>
@@ -71,7 +74,7 @@
 
     <section class="background-white pt-5 pb-5">
         <div class="container">
-            <p class="h4 header"><span class="title-capsule">ij</span> Fellows wanted dead <span class="h6">(Or
+            <p class="h5 header"><span class="title-capsule">ij</span> Fellows wanted dead <span class="h6">(Or
                     alive if you want to eat them later.)</span><span class="title-capsule">
                     ij</span>
             </p>
@@ -93,33 +96,61 @@
             <div class="container">
                 <!-- First profile card -->
                 <div class="row">
-                    <div class="col-lg card profile  mb-3">
-                        <p class="reward">Reward <span class="reward-value">1000</span> <br> golden coins</p>
-                        <h2 class="identity header">Gandalf</h2>
-                        <img class="card-img-top" src="./assets/img/gandalf.png" alt="Image profile">
-                        <div class="card-body bg-dark">
-                            <p>A very dangerous wizard, balrog killer...</p>
+                    <div class="col-lg  ">
+                        <div class="d-flex flex-column card justify-content-center background-black">
+                            <div class="profile text-align-center">
+                                <div class="card-image">
+                                    <p class="reward">Reward <span class="reward-value">1000</span> <br> golden
+                                        coins
+                                    </p>
+                                    <p class="identity header h3 text-white">Gandalf</p>
+
+                                    <img class="card-img-top p-1" src="./assets/img/gandalf.png" alt="Image profile">
+                                </div>
+                            </div>
+
+                            <div class="card-body hide-overflow">
+                                <p class="text-white body-one h4">A very dangerous wizard, balrog killer...</p>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Second profile card -->
 
-                    <div class="col-lg card profile mb-3">
-                        <p class="reward ">Reward <span class="reward-value">800</span> <br>golden coins</p>
-                        <h2 class=" identity header">Aragorn</h2>
-                        <img class="card-img-top" src="./assets/img/aragorn.png" alt="Image profile">
-                        <div class="card-body bg-dark">
-                            <p>Sauron's finger says his sword is dangerous...</p>
+                    <div class="col-lg ">
+                        <div class="d-flex flex-column card justify-content-center background-black">
+                            <div class="profile text-align-center">
+                                <div class="card-image">
+                                    <p class="reward">Reward <span class="reward-value">1000</span> <br> golden
+                                        coins
+                                    </p>
+                                    <p class="identity header h3 text-white">Aragorn</p>
+
+                                    <img class="card-img-top p-1" src="./assets/img/aragorn.png" alt="Image profile">
+                                </div>
+                            </div>
+
+                            <div class="card-body hide-overflow">
+                                <p class="text-white body-one h4">Sauron's finger says his sword is dangerous...</p>
+                            </div>
                         </div>
                     </div>
                     <!-- Third profile card -->
 
-                    <div class="col-lg card profile mb-3">
-                        <p class="reward is-dead">Dead</p>
-                        <h2 class="identity header">Gimli</h2>
-                        <img class="card-img-top" src="./assets/img/gimli.png" alt="Image profile">
-                        <div class="card-body">
-                            <p>A dwarf with a bread and an axe...</p>
+                    <div class="col-lg">
+                        <div class="d-flex flex-column card justify-content-center background-black">
+                            <div class="profile text-align-center is-dead">
+                                <div class="card-image">
+                                    <p class="reward  h4 color-primary" >Dead</p>
+                                    <p class="identity header h3 text-white dead">Gimli</p>
+
+                                    <img class="card-img-top p-1" src="/assets/img/gimli.png" alt="Image profile">
+                                </div>
+                            </div>
+
+                            <div class="card-body hide-overflow">
+                                <p class="text-white body-one h4">A dwarf with a bread and an axe...</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -128,7 +159,7 @@
     </section>
     <section class="background-black pt-5 pb-5">
         <div class="container">
-            <p class=" h4 text-white"><span class="title-capsule">ij </span>I have captured one of them, how to get my
+            <p class=" h5 text-white"><span class="title-capsule">ij </span>I have captured one of them, how to get my
                 result? <span class="title-capsule"> ij</span>
             </p>
             <div class="row  mt-5">
@@ -156,7 +187,7 @@
     </section>
     <section class="background-white pt-5 pb-5"">
         <div  class=" container ">
-        <p class=" header h4 mb-4">
+        <p class=" header h5 mb-4">
         <span class="title-capsule">ij</span>
         <span>Our best hunter</span>
         <span class="title-capsule">ij</span>
@@ -169,7 +200,8 @@
                         <p class="display-4 color-primary m-0">elveskiller22</p>
                         <span class="h4">2 captures - <u>profile</u></span>
 
-                        <div class="background-black skew button price rounded-0 color-primary d-flex justify-content-center">
+                        <div
+                            class="background-black skew button price rounded-0 color-primary d-flex justify-content-center">
                             <img src="./assets/img/ring.png" class="mr-1" alt="Icon">
                             <p class=" un-skew m-0  h4">12 hace</p>
                         </div>
@@ -184,7 +216,8 @@
                         <p class="display-4 color-primary m-0">goblin45</p>
                         <span class="h4">1 captures - <u>profile</u></span>
 
-                        <div class="background-black skew button price rounded-0 color-primary d-flex justify-content-center">
+                        <div
+                            class="background-black skew button price rounded-0 color-primary d-flex justify-content-center">
                             <img src="./assets/img/ring.png" class="mr-1" alt="Icon">
                             <p class=" un-skew m-0  h4">18 hace</p>
                         </div>
@@ -196,7 +229,7 @@
     </section>
     <section class=" background-black  pt-5 pb-5">
         <div class="container">
-            <p class="header  h4 mb-5 text-white">
+            <p class="header  h5 mb-5 text-white">
                 <span class="title-capsule">ij</span>
                 <span> About the ring </span>
                 <span class="title-capsule">ij</span>
@@ -255,7 +288,13 @@
     </section>
     <section class="background-white  pt-5 pb-5">
         <div class="container">
-            <p class="h4 mb-3">Join Mordor Army, we need you !</p>
+
+            <p class="h5 mb-3">
+                <span class="title-capsule">ij</span>
+                <span>Join Mordor Army, we need you !</span>
+                <span class="title-capsule">ij</span>
+            </p>
+
             <div class="row">
                 <div class="col-md-8">
                     <p class="body-one h4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti et porro,
@@ -276,8 +315,8 @@
 
                 <div class="col-md-8 text-center align-self-center">
                     <p class="text-color-primary">More info on</p>
-                    <div class="btn skew  text-color-primary">
-                        <a class=" bg-dark bg-light un-skew ">SauronRulesThemAll.com</a>
+                    <div class="skew btn background-black rounded-0 h4  text-color-primary">
+                        <p class="un-skew m-0">SauronRulesThemAll.com</panel>
                     </div>
 
                 </div>
@@ -286,9 +325,11 @@
     </section>
     <section class=" background-black pt-5 pb-5">
         <div class="container">
-            <h2 class="header">
-                <span class="title-capsule">ij</span> Contact us <span class="title-capsule">ij</span>
-            </h2>
+            <p class="header">
+                <span class="title-capsule">ij</span>
+                <span class="text-white">Contact us </span>
+                <span class="title-capsule">ij</span>
+            </p>
             <div class="row">
                 <div class="col-md-6">
                     <form action="#">
@@ -296,7 +337,8 @@
                             <input class="form-control" type="email" name="email" id="input-email" placeholder="@">
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="address" id="input-address" placeholder="Address">
+                            <input class="form-control" type="text" name="address" id="input-address"
+                                placeholder="Address">
                         </div>
                         <div class="form-group">
                             <select class="form-control">
@@ -317,32 +359,35 @@
 
         </div>
     </section>
-    <footer class="background-primary pb-4 pt-4">
+    <footer class="background-primary  pb-4 pt-4">
         <div class="container">
             <div class="row">
-                <div class="col-sm d-flex flex-column justify-content-center">
-                    <a href="#"> About us</a>
-                    <a href="#"> Fellows</a>
-                    <a href="#">Join our army</a>
+                <div class="col-sm d-flex flex-column justify-content-center ">
+                    <a href="#" class="text-white"> About us</a>
+                    <a href="#" class="text-white"> Fellows</a>
+                    <a href="#" class="text-white">Join our army</a>
                 </div>
                 <div class="col-sm d-flex flex-column justify-content-center">
-                    <a href="#">FAG</a>
-                    <a href="#">Reward conditions</a>
-                    <a href="#">Legal mentions</a>
+                    <a href="#" class="text-white">FAG</a>
+                    <a href="#" class="text-white">Reward conditions</a>
+                    <a href="#" class="text-white">Legal mentions</a>
                 </div>
                 <div class="col-sm d-flex flex-column justify-content-center">
-                    <a href="#">Sauron4Ever.com</a>
-                    <a href="#">Follow him also on twitter</a>
+                    <a href="#" class="text-white">Sauron4Ever.com</a>
+                    <a href="#" class="text-white">Follow him also on twitter</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
 

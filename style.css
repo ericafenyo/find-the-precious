@@ -40,7 +40,7 @@ h2 {
     font-weight: 400;
 }
 
-th{
+th {
     border-bottom: 3px solid #000 !important;
 }
 
@@ -54,9 +54,23 @@ th{
 }
 
 .panel {
-    border-top-left-radius: 8px ;
+    border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding-bottom: 4px;
+}
+
+.dead {
+    position: relative;
+}
+
+.dead::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 80px;
+    height: 4px;
+    width: 50%;
+    background: var(--color-primary);
 }
 
 /* Utilities */
@@ -81,11 +95,6 @@ th{
     background-size: cover;
 }
 
-.profile {
-    width: 300px;
-    height: 100%;
-}
-
 .text-white-secondary {
     color: rgba(255, 255, 255, .7)
 }
@@ -94,9 +103,15 @@ th{
     font-size: 12px;
 }
 
-.nav-link {
+.link {
+    margin: 10px 20px!important;
     color: var(--color-secondary);
     position: relative;
+    padding: 0 8px;
+}
+
+.navbar-collapse .active {
+    border-bottom: 4px solid white;
 }
 
 .button {
@@ -105,22 +120,22 @@ th{
 }
 
 .price {
-    width: 120px;
+    width: 140px;
 }
 
 .w-100px {
     width: 100px;
 }
 
-/* .nav-item :after {
+.link::before {
     position: absolute;
     content: '';
     top: 0;
-    right: 0;
-    width: 1Px;
-    height: 100%;
-    background: var(--color-secondary);
-} */
+    right: -15px;
+    width: 2Px;
+    height: 16px;
+    background: white;
+}
 
 .title-capsule {
     font-family: "Tngani";
@@ -157,28 +172,20 @@ th{
     flex-grow: unset !important;
 }
 
-.tab-layout a:hover,
-.tab-layout .is-active {
+.tab-layout a:hover, .tab-layout .is-active {
     color: var(--color-primary) !important;
     border-bottom: 4px solid var(--color-primary);
 }
 
-.tab-layout .is-active .tab-capsule,
-.tab-layout a:hover .tab-capsule {
+.tab-layout .is-active .tab-capsule, .tab-layout a:hover .tab-capsule {
     opacity: 1;
-}
-
-.profile {
-    padding: 0;
-    margin-right: 16px;
 }
 
 .profile:last-child {
     margin-right: 0;
 }
 
-.profile .identity,
-.profile .reward {
+.profile .identity, .profile .reward {
     left: 50%;
     -webkit-transition: .2s all;
     transition: .2s all;
@@ -195,22 +202,37 @@ th{
     overflow: hidden;
 }
 
-.profile::before,
-.profile .identity,
-.profile .reward {
+.profile::before, .profile .identity, .profile .reward {
     position: absolute;
 }
 
-.profile::before {
-    content: '';
-    background: rgba(255, 255, 255, .4);
+.profile {
+    position: relative;
 }
 
-.profile:hover::before {
+.is-dead .card-image::before {
+    background: rgba(0, 0, 0, .6);
+}
+
+.is-dead .reward {
+    background: transparent !important;
+}
+
+.card-image::before {
+    content: '';
+    bottom: 3px;
+    right: 3px;
+    position: absolute;
+    background: rgba(255, 255, 255, .4);
+    width: 98%;
+    height: 98%;
+}
+
+.card-image:hover::before {
     background: rgba(255, 255, 255, 0);
 }
 
-.profile:hover>.identity {
+.card-image:hover>.identity {
     bottom: 10%;
     -webkit-transition-duration: 0s, 1s;
     transition-duration: 0s, 1s;
@@ -222,25 +244,25 @@ th{
 
 @-webkit-keyframes fade-in-shrink {
     0% {
-        font-size: 32px;
+        font-size: 20px;
         opacity: 0;
     }
     100% {
-        font-size: 32px;
+        font-size: 20px;
     }
 }
 
 @keyframes fade-in-shrink {
     0% {
-        font-size: 32px;
+        font-size: 20px;
         opacity: 0;
     }
     100% {
-        font-size: 32px;
+        font-size: 20px;
     }
 }
 
-.profile:hover>.reward {
+.card-image:hover>.reward {
     opacity: 0;
 }
 
@@ -249,7 +271,6 @@ th{
 }
 
 .profile .reward {
-    font-size: 28px;
     top: 24px;
     display: inline-block;
     width: 85%;
@@ -259,10 +280,9 @@ th{
     background: rgba(255, 255, 255, .9);
 }
 
-.profile img,
-.profile::before {
-    width: 100%;
+.card-image {
     height: 100%;
+    width: 100%;
 }
 
 .profile .identity {
