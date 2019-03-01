@@ -1,11 +1,141 @@
+:root {
+    --color-primary: #FE661D;
+    --color-secondary: rgba(255, 255, 255, 0.6);
+}
+
+@font-face {
+    font-family: "Anirb";
+    src: url(./assets/fonts/anirb___.ttf);
+}
+
+@font-face {
+    font-family: "Tngani";
+    src: url(./assets/fonts/tngani.ttf)
+}
+
+@font-face {
+    font-family: "Tngan";
+    src: url(./assets/fonts/tngan.ttf)
+}
+
+@font-face {
+    font-family: "Partybusiness";
+    src: url(./assets/fonts/partybusiness.ttf)
+}
+
+body {
+    font-family: "Anirb" !important;
+}
+
 h2 {
     font-size: 48px;
     font-weight: 400;
-    color: white;
+}
+
+.color-primary {
+    color: var(--color-primary)
+}
+
+.body-one {
+    font-family: "Partybusiness";
+    font-size: 24px;
+}
+
+.header, .header span {
+    font-size: 26px;
+    font-family: "Partybusiness"
+}
+
+.title {}
+
+/* Utilities */
+
+.is-dead {}
+
+.background-primary {
+    background: var(--color-primary);
+}
+
+.background-white {
+    background-image: url(./assets/img/bg_light.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.background-black {
+    background-image: url(./assets/img/bg_dark.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .card {
     width: 300px;
+}
+
+.text-white-secodary {
+    color: rgba(255, 255, 255, .7)
+}
+
+.navbar {
+    font-size: 12px;
+}
+
+.carousel-caption h2 {
+    font-family: "Partybusiness"
+}
+
+.carousel-caption p {
+    font-family: "Partybusiness"
+}
+
+.header-caption {
+    font-size: 16px !important;
+}
+
+.nav-link {
+    color: var(--color-secondary);
+    position: relative;
+}
+
+/* .nav-item :after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 1Px;
+    height: 100%;
+    background: var(--color-secondary);
+} */
+
+.title-capsule {
+    font-family: "Tngani";
+    color: rgba(254, 102, 29, .8);
+    font-size: 40px !important;
+}
+
+.tab-capsule {
+    font-family: "Tngani";
+    color: rgba(254, 102, 29, .8);
+    font-size: 20px !important;
+    opacity: 0;
+    transition: .3s;
+}
+
+.nav-link {
+    padding: 0;
+    margin: 0 10px;
+    border-radius: 0 !important;
+}
+
+.nav-pills a:hover, .nav-pills a .is-active {
+    color: var(--color-primary) !important;
+    border-bottom: 4px solid var(--color-primary);
+}
+
+.nav-pills a:hover .tab-capsule {
+    opacity: 1;
 }
 
 .profile {
@@ -17,8 +147,7 @@ h2 {
     margin-right: 0;
 }
 
-.profile .identity,
-.profile .reward {
+.profile .identity, .profile .reward {
     left: 50%;
     -webkit-transition: .2s all;
     transition: .2s all;
@@ -35,9 +164,7 @@ h2 {
     overflow: hidden;
 }
 
-.profile::before,
-.profile .identity,
-.profile .reward {
+.profile::before, .profile .identity, .profile .reward {
     position: absolute;
 }
 
@@ -65,7 +192,6 @@ h2 {
         font-size: 32px;
         opacity: 0;
     }
-
     100% {
         font-size: 32px;
     }
@@ -76,7 +202,6 @@ h2 {
         font-size: 32px;
         opacity: 0;
     }
-
     100% {
         font-size: 32px;
     }
@@ -101,8 +226,7 @@ h2 {
     background: rgba(255, 255, 255, .9);
 }
 
-.profile img,
-.profile::before {
+.profile img, .profile::before {
     width: 100%;
     height: 100%;
 }
