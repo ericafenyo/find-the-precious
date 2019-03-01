@@ -110,6 +110,15 @@ th {
     padding: 0 8px;
 }
 
+.navbar-collapse .link{
+    border-bottom: 4px solid transparent;
+}
+
+.navbar-collapse .link:hover {
+    border-bottom: 4px solid white;
+    color: white;
+}
+
 .navbar-collapse .active {
     border-bottom: 4px solid white;
 }
